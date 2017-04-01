@@ -4,6 +4,7 @@
 #include "system.h"
 #include "types.h"
 
+
 string readStr()
 {
     char buff;
@@ -84,6 +85,11 @@ string readStr()
         case 14:
                 printch('\b');
                 i--;
+                if(i<0)
+                {
+                	i = 0;
+                }
+                buffstr[i+1] = 0;
                 buffstr[i] = 0;
                 break;
        /* case 15:
@@ -152,10 +158,10 @@ string readStr()
                 i++;
                 break;
         case 28:
-                //printch('\n');
-                //buffstr[i] = '\n';
-                i++;
-                reading = 0;
+               // printch('\n');
+               // buffstr[i] = '\n';
+                  i++;
+               reading = 0;
                 break;
       /*  case 29:
                 printch('q');           Left Control
@@ -305,7 +311,7 @@ string readStr()
             }
         }
     }
-    buffstr[i] = 0;                   
+    buffstr[i-1] = 0;                
     return buffstr;
 }
 #endif

@@ -103,9 +103,9 @@ void printch(char c)
 
 void print (string ch)
 {
-        uint16 i = 0;
-	uint8 length = strlength(ch)-1;
-        for(i;i<length;i++)
+        uint16 i;
+	uint8 length = strlength(ch);
+        for(i=0;i<length;i++)
         {
                 printch(ch[i]);
         }
