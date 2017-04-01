@@ -10,12 +10,14 @@
 void help()
 {
 	print("\nclear     : Clears the screen");
-	print("\nsum       : Computes the sum of n numbers");
+	print("\nsum       : Calculate the sum of n numbers");
 	print("\necho      : Reprint a given text");
-	print("\nsort      : Sorts a given n numbers");
+	print("\nreverse   : Print the string in reverse");
+	print("\npower     : Calculate power of a number");
+	print("\nsquare    : Calculate the square of a number");
+	print("\ndiv       : Divide one number by another");
 	print("\nexit      : Exit from shell");
-	print("\nPower     : ");
-
+	
 	
 	print("\n\n");
 }
@@ -24,12 +26,13 @@ void fill_array(int arr[],int n)
 {
 	int i = 0;
 	for (i = 0;i<n;i++)
-	{
-		
+	{	
 		arr[i] = str_to_int(readStr());
 		print("\n");
 	}
 }
+
+/*
 void print_array(int arr[],int n)
 {
 	int i = 0;
@@ -37,12 +40,13 @@ void print_array(int arr[],int n)
 	{
 		/*print("ARR[");
 		print(int_to_string(i));
-		print("]: ");*/
+		print("]: ");
 		print(int_to_string(arr[i]));
 		print("   ");
 	}
 	print("\n");
 }
+*/
 
 int sum_array(int arr[],int n)
 {
@@ -59,7 +63,6 @@ void sum()
 {
 	print("\nHow many numbers: ");
 	int n = str_to_int(readStr());
-	int i =0;
 	print("\n");
 	int arr[n];
 	fill_array(arr,n);
@@ -70,13 +73,12 @@ void sum()
 }
 void echo()
 {
-	print("\n");
+	print("  ");
 	string str = readStr();
 	print("\n");
 	print(str);
 	print("\n");
 }
-
 
 void reverse(){
 
@@ -138,7 +140,6 @@ int div_array(int arr[])
 	return s;
 }
 
-
 void Division()
 {
 
@@ -158,7 +159,6 @@ void launch_shell()
 {
 
 	string ch;
-
 	while (1)
 	{
 		    print("NJarvis (");
@@ -191,7 +191,7 @@ void launch_shell()
 		    
 		   else if(strEql(ch,"exit"))
 		    {
-			print("\nBye\n");
+			print("\nBye...\n");
 		    	break;
 		    }
 		
